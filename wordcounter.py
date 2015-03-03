@@ -180,7 +180,7 @@ if __name__ == "__main__":
 
     if len(sys.argv) >= 2:
         for fname in sys.argv[1:]:
-            print("Opening file {}".format(fname))
+            print("Opening file {0}".format(fname))
 
             try:
                 f = open(fname)
