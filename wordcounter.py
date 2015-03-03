@@ -167,8 +167,8 @@ def report(counters, extra_data):
         if index >= MAX_MATCHES:
             break
 
-    print("Time elapsed: {:.3f} seconds".format(extra_data["time_elapsed"]))
-    print("Total of {:,} words in input data".format(extra_data["words"]))
+    print("Time elapsed: {0:.3f} seconds".format(extra_data["time_elapsed"]))
+    print("Total of {0:,} words in input data".format(extra_data["words"]))
 
 
 if __name__ == "__main__":
@@ -186,7 +186,7 @@ if __name__ == "__main__":
                 f = open(fname)
             except IOError:
                 usage()
-                print("ERROR: Failed to open file {}".format(fname))
+                print("ERROR: Failed to open file {0}".format(fname))
                 sys.exit(1)
 
             data_sources.append(f)
