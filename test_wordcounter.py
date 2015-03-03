@@ -5,7 +5,7 @@ from io import StringIO
 
 class TestWordCounter(unittest.TestCase):
     def test_process_line(self):
-        line = u"these words are my test words"
+        line = "these words are my test words"
 
         counters = {}
         words = wordcounter.process_line(line, counters)
@@ -28,20 +28,20 @@ class TestWordCounter(unittest.TestCase):
     def test_process_data(self):
         data_sources = []
 
-        data_sources.append(StringIO(u"""
+        data_sources.append("""
         This is a supposed test file.
         This file has two lines with data.
-        """))
+        """.split("\n"))
 
-        data_sources.append(StringIO(u"""
+        data_sources.append("""
         Another fake file with fake lines.
-        """))
+        """.split("\n"))
 
         words, counters = wordcounter.process_data(data_sources)
 
-        self.assertEquals(words, 19)
-        self.assertEquals(counters["file"]["count"], 3)
-        self.assertEquals(counters["This"]["count"], 2)
+        self.assertEqual(words, 19)
+        self.assertEqual(counters["file"]["count"], 3)
+        self.assertEqual(counters["This"]["count"], 2)
 
 
 if __name__ == '__main__':

@@ -5,6 +5,7 @@ python:
  - "3.0"
  - "3.1"
  - "3.2"
+ - "3.3"
  - "3.4"
 #install: "pip install -r requirements.txt"
 script: "python test_wordcounter.py"
