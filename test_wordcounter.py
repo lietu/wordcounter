@@ -1,6 +1,5 @@
 import unittest
 import wordcounter
-from io import StringIO
 
 
 class TestWordCounter(unittest.TestCase):
