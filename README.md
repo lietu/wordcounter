@@ -5,6 +5,16 @@ Simple word counting tool. You can provide input data via STDIN and/or in form
 of source filenames. The tool reads all the input data and counts words in them
 and then reports the most common words and how many matches there were.
 
+
+Status
+------
+
+[![Build Status](https://travis-ci.org/lietu/wordcounter.svg?branch=master)](https://travis-ci.org/lietu/wordcounter)
+
+
+Usage
+-----
+
 Example usage via STDIN:
 ```
 find / | python wordcounter.py
